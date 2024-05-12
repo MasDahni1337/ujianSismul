@@ -90,6 +90,7 @@
                 <div class="modal-body">
                     <form id="deleteForm" method="POST">
                         Are you sure want to delete this product?
+                        <input type="hidden" id="deleteID" name="deleteID">
                         <div class="mt-3">
                             <button type="submit" class="btn btn-danger">Delete</button>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>

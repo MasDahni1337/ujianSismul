@@ -1,7 +1,7 @@
 
 const domain = window.location.host.match(/localhost/g) ? `http://${window.location.host}` : `https://${window.location.host}`;
 function btnDelete(id){
-    $('#productId').val(id);
+    $('#deleteID').val(id);
     $('#deleteModal').modal('show');
 }
 
@@ -113,12 +113,12 @@ $(document).ready(function() {
 
     $('#deleteForm').on('submit', function(e) {
         e.preventDefault(); 
-        var productId = $('#productId').val();
-        if (!productId) {
+        var deleteID = $('#deleteID').val();
+        if (!deleteID) {
             return;
         }
         $.ajax({
-            url: `/singleDelete/${productId}`,
+            url: `/singleDelete/${deleteID}`,
             type: 'POST',
             success: function(response) {
                 console.log(response);
